@@ -1,0 +1,17 @@
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\Negocios\bin\Debug\net6.0\Negocios.deps.json
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\Negocios\bin\Debug\net6.0\Negocios.dll
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\Negocios\bin\Debug\net6.0\Negocios.pdb
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\Negocios\obj\Debug\net6.0\Negocios.csproj.AssemblyReference.cache
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\Negocios\obj\Debug\net6.0\Negocios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\Negocios\obj\Debug\net6.0\Negocios.AssemblyInfoInputs.cache
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\Negocios\obj\Debug\net6.0\Negocios.AssemblyInfo.cs
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\Negocios\obj\Debug\net6.0\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\Negocios\obj\Debug\net6.0\Negocios.dll
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\Negocios\obj\Debug\net6.0\refint\Negocios.dll
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\Negocios\obj\Debug\net6.0\Negocios.pdb
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\Negocios\obj\Debug\net6.0\ref\Negocios.dll
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\Negocios\bin\Debug\net6.0\AccesoDatos.dll
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\Negocios\bin\Debug\net6.0\Entidades.dll
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\Negocios\bin\Debug\net6.0\AccesoDatos.pdb
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\Negocios\bin\Debug\net6.0\Entidades.pdb
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\Negocios\obj\Debug\net6.0\Negocios.csproj.CopyComplete

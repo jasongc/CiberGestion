@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "iKifz6jxg2FY1aOH5jRckgzMN5cTeoKbM6mAi8kK1gJv9TnuLu1oj9ZsvZkDncQ2D4rFp5R9VYlP82KwWnC3cw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\Cibergestion\\ControlUsuarios\\Middleware\\Middleware.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gutie\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\gutie\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\gutie\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\gutie\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\gutie\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\gutie\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\gutie\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

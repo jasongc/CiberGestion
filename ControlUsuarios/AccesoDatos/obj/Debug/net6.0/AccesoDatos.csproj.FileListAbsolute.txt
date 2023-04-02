@@ -1,0 +1,15 @@
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\AccesoDatos\bin\Debug\net6.0\AccesoDatos.deps.json
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\AccesoDatos\bin\Debug\net6.0\AccesoDatos.dll
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\AccesoDatos\bin\Debug\net6.0\AccesoDatos.pdb
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\AccesoDatos\obj\Debug\net6.0\AccesoDatos.csproj.AssemblyReference.cache
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\AccesoDatos\obj\Debug\net6.0\AccesoDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\AccesoDatos\obj\Debug\net6.0\AccesoDatos.AssemblyInfoInputs.cache
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\AccesoDatos\obj\Debug\net6.0\AccesoDatos.AssemblyInfo.cs
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\AccesoDatos\obj\Debug\net6.0\AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\AccesoDatos\obj\Debug\net6.0\AccesoDatos.dll
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\AccesoDatos\obj\Debug\net6.0\refint\AccesoDatos.dll
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\AccesoDatos\obj\Debug\net6.0\AccesoDatos.pdb
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\AccesoDatos\obj\Debug\net6.0\ref\AccesoDatos.dll
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\AccesoDatos\bin\Debug\net6.0\Entidades.dll
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\AccesoDatos\bin\Debug\net6.0\Entidades.pdb
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\AccesoDatos\obj\Debug\net6.0\AccesoDatos.csproj.CopyComplete

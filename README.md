@@ -13,6 +13,7 @@ Se usó:
 
 
 NOTA:
+ - Por esta ocasión se agregó toda la carpeta de node_modules para evitar posibles errores.
  - Tener en cuenta que el proyecto ubicado en la carpeta ControlUsuarios es la parte Backend y el proyecto(desarrollado en angular) ubicado en la carpeta control-usuario-front es la parte frontend
  - En el archivo appsettings.json del BACKEND en el key DefaultConnection especificar el servidor de su base de datos, y el usuario-contraseña si es que lo tuviera.
  - En el archivo appsettings.json del BACKEND en el key Path especificar la ruta de los logs de los tiempos de respuestode los servicios, caso contrario, se guardará en la raíz del

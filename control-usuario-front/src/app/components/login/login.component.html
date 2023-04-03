@@ -1,0 +1,18 @@
+
+<div class="row w-100 mx-0 justify-content-center">
+    <div class="col-12 col-md-6">
+        <form [formGroup]="forma" (ngSubmit)="login()" class="bg-light text-center border border-light p-5 animated fadeIn">
+
+            <p class="h4 mb-4">Login CiberGestion</p>
+
+            <input [ngClass]="{ 'border-danger': !forma.controls['usuario'].valid && forma.get('usuario')?.touched}" required type="email" formControlName="usuario" class="form-control" placeholder="E-mail">
+            <div *ngIf="!forma.controls['usuario'].valid && forma.get('usuario')?.touched" class="text-danger form-control-feedback">Ingrese un e-mail valido</div>
+
+            <input [ngClass]="{ 'border-danger': !forma.controls['contrasenia'].valid && forma.get('contrasenia')?.touched}" required type="password" formControlName="contrasenia" class="form-control mt-4" placeholder="Contraseña" aria-describedby="defaultRegisterFormcontraseniaHelpBlock">
+            <div *ngIf="!forma.controls['contrasenia'].valid && forma.get('contrasenia')?.touched" class="text-danger form-control-feedback">Debe ingresar una constraseña correcta. Recuerde que debe tener un mínimo de 10 caracteres, al menos una mayúscula, minúscula, número y algún caracter especial(@#$%^&*()_)</div>
+
+            <button color="info" [disabled]="!forma.valid" block="true" class="my-4 btn btn-primary" type="submit">Ingresar</button>
+            <hr>
+        </form>
+    </div>
+</div>

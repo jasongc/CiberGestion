@@ -30,6 +30,7 @@ namespace AccesoDatos.Clases
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@piIdUsuario", usuarioLogin.iIdUsuario);
                         cmd.Parameters.AddWithValue("@pvContrasenia", usuarioLogin.sContrasenia);
+                        cmd.Parameters.AddWithValue("@pvNuevaContrasenia", usuarioLogin.sNuevaContrasenia);
 
                         cmd.ExecuteNonQuery();
                         cmd.Dispose();

@@ -30,8 +30,8 @@ CREATE TABLE UsuarioLoginHistorico(
 	iIdUsuarioLoginHistorico INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
 	iIdUsuario INT FOREIGN KEY REFERENCES Usuario(iIdUsuario) NOT NULL,
 	siIntentos SMALLINT NOT NULL,
-	vJWT NVARCHAR(MAX),
-	dtFechaInicioSesion DATETIME NOT NULL,
+	vJWT NVARCHAR(MAX) NULL,
+	dtFechaInicioSesion DATETIME NULL,
 	dtFechaCierreSesion DATETIME NULL
 )
 GO
@@ -58,20 +58,38 @@ BEGIN
 	FROM UsuarioLoginHistorico 
 	WHERE iIdUsuario = @piIdUsuario
 	AND dtFechaCierreSesion IS NULL
+	AND dtFechaInicioSesion IS NULL
 
 	UPDATE UsuarioLoginHistorico SET
 		siIntentos = @siIntentos + 1
 	WHERE iIdUsuarioLoginHistorico = @iIdUsuarioLoginHistorico
 
-	IF @siIntentos <= 3
+	EXEC RegistrarCierreLogin @piIdUsuario = @piIdUsuario
+
+	IF @iIdUsuarioLoginHistorico IS NULL
+	BEGIN
+		INSERT INTO UsuarioLoginHistorico(
+			iIdUsuario,
+			vJWT,
+			siIntentos,
+			dtFechaInicioSesion
+		)
+		VALUES(
+			@piIdUsuario,
+			NULL,
+			1,
+			NULL
+		)
+	END
+
+	IF @siIntentos >= 3
 	BEGIN		
-		
 		UPDATE Usuario SET 
 			siEstado = @siEstadoBloqueadoLogin
 		WHERE iIdUsuario = @piIdUsuario
 
-		RAISERROR(50001, 16, 1, 'Tiene muchos intentos fallidos y su cuenta ha sido bloqueada, por favor comuníquese con el adminsitrador.')
-	END		
+		RAISERROR('Tiene muchos intentos fallidos y su cuenta ha sido bloqueada, por favor comuníquese con el adminsitrador.', 16, 1)
+	END
 END
 GO
 CREATE PROCEDURE RegistrarCierreLogin
@@ -82,6 +100,7 @@ BEGIN
 		dtFechaCierreSesion = GETDATE()
 	WHERE iIdUsuario = @piIdUsuario
 	AND dtFechaCierreSesion IS NULL
+	AND dtFechaInicioSesion IS NOT NULL
 END
 GO
 CREATE PROCEDURE RegistrarInicioLogin
@@ -91,68 +110,91 @@ AS
 BEGIN
 	DECLARE @iIdUsuarioLoginHistorico INT,
 			@siIntentos SMALLINT,
-			@dtFechaAcceso DATETIME = GETDATE()
+			@dtFechaInicioSesion DATETIME,
+			@dtFechaAcceso DATETIME = GETDATE(),
+			@bRegistrar BIT = 0
 
 	SELECT TOP 1
 		@iIdUsuarioLoginHistorico =  iIdUsuarioLoginHistorico,
-		@siIntentos = siIntentos
+		@siIntentos = siIntentos,
+		@dtFechaInicioSesion = dtFechaInicioSesion
 	FROM UsuarioLoginHistorico 
 	WHERE iIdUsuario = @piIdUsuario
 	AND dtFechaCierreSesion IS NULL
 
+	IF ISNULL(@iIdUsuarioLoginHistorico,0) <> 0 AND @dtFechaInicioSesion IS NOT NULL
+	BEGIN
+		EXEC RegistrarCierreLogin @piIdUsuario = @piIdUsuario
 
-	IF ISNULL(@iIdUsuarioLoginHistorico,0) <> 0
+		SET @bRegistrar = 1
+
+	END ELSE IF ISNULL(@iIdUsuarioLoginHistorico,0) <> 0 AND @dtFechaInicioSesion IS NULL
 	BEGIN
 		UPDATE UsuarioLoginHistorico SET 
-			dtFechaCierreSesion = @dtFechaAcceso
+			dtFechaInicioSesion = @dtFechaAcceso,
+			vJWT = @pvJWT
 		WHERE iIdUsuarioLoginHistorico = @iIdUsuarioLoginHistorico
+	END ELSE
+	BEGIN
+		SET @bRegistrar = 1
 	END
 
-	INSERT INTO UsuarioLoginHistorico(
-		iIdUsuario,
-		vJWT,
-		siIntentos,
-		dtFechaInicioSesion
-	)
-	VALUES(
-		@piIdUsuario,
-		@pvJWT,
-		1,
-		@dtFechaAcceso
-	)
+	IF @bRegistrar = 1
+	BEGIN
+		INSERT INTO UsuarioLoginHistorico(
+			iIdUsuario,
+			vJWT,
+			siIntentos,
+			dtFechaInicioSesion
+		)
+		VALUES(
+			@piIdUsuario,
+			@pvJWT,
+			1,
+			@dtFechaAcceso
+		)
+	END
 
+	
 	SELECT @dtFechaAcceso
 
 END
 GO
 CREATE PROCEDURE CambiarContrasenia
 	@piIdUsuario int,
-	@pvContrasenia VARCHAR(30)
+	@pvContrasenia VARCHAR(30),
+	@pvNuevaContrasenia VARCHAR(30)
 AS
 BEGIN TRY
 	BEGIN TRANSACTION
 		
-		SELECT 
+		SELECT TOP 3
 			iIdUsuario,
-			vContrasenia
+			vContrasenia,
+			dtFechaCrea
 		INTO #tmp_UsuarioContraseniaHistorico
 		FROM UsuarioContraseniaHistorico WITH(NOLOCK)
 		WHERE iIdUsuario = @piIdUsuario
+		ORDER BY dtFechaCrea DESC
 
-
-		IF EXISTS(SELECT 
-			  		iIdUsuario 
-				  FROM #tmp_UsuarioContraseniaHistorico
-				  GROUP BY iIdUsuario
-				  HAVING COUNT(iIdUsuario) >= 3)
-		BEGIN
-			 RAISERROR(50001, 16, 1, 'La contraseña no puede ser modifica más de 3 veces, por favor comuníquese con su administrador.')
-		END
-		ELSE IF EXISTS(SELECT '1' 
+		--IF EXISTS(SELECT 
+		--	  		iIdUsuario 
+		--		  FROM #tmp_UsuarioContraseniaHistorico
+		--		  GROUP BY iIdUsuario
+		--		  HAVING COUNT(iIdUsuario) >= 3)
+		--BEGIN
+		--	 RAISERROR('La contraseña no puede ser modifica más de 3 veces, por favor comuníquese con su administrador.', 16, 1)
+		--END
+		--ELSE 
+		IF EXISTS(SELECT '1' 
 					   FROM #tmp_UsuarioContraseniaHistorico 
-					   WHERE vContrasenia = @pvContrasenia)
+					   WHERE vContrasenia = @pvNuevaContrasenia) OR @pvContrasenia = @pvNuevaContrasenia
 		BEGIN
-			 RAISERROR(50001, 16, 1, 'Ups! parece que ya utilizó esta contraseña, por favor utilice otra.')
+			 RAISERROR('Ups! parece que ya utilizó esta contraseña en las últimas 3 actualizaciones, por favor utilice otra.', 16, 1)
+		END 
+		ELSE IF NOT EXISTS(SELECT 1 FROM Usuario WHERE iIdUsuario = @piIdUsuario AND vContrasenia = @pvContrasenia)
+		BEGIN
+			 RAISERROR('Ups! parece que su contraseña actual es incorrecta.', 16, 1)
 		END
 		ELSE
 		BEGIN
@@ -169,7 +211,7 @@ BEGIN TRY
 			WHERE iIdUsuario = @piIdUsuario
 
 			UPDATE Usuario SET 
-				vContrasenia = @pvContrasenia
+				vContrasenia = @pvNuevaContrasenia
 			WHERE iIdUsuario = @piIdUsuario
 
 		END
@@ -214,11 +256,11 @@ BEGIN
 			  WHERE vDescripcionInterna = 'BLOQUEO_LOGIN' 
 			  AND siEstado = @siEstadoUsuario) 
 	BEGIN
-		RAISERROR(50001, 16, 1, 'Tiene muchos intentos fallidos y su cuenta ha sido bloqueada, por favor comuníquese con el adminsitrador.')
+		RAISERROR('Tiene muchos intentos fallidos y su cuenta ha sido bloqueada, por favor comuníquese con el adminsitrador.', 16, 1)
 	END
 	ELSE IF ISNULL(@iIdUsuario, 0) = 0
 	BEGIN
-		RAISERROR(50001, 16, 1, 'El usuario con el que intenta ingresar no existe.')
+		RAISERROR('El usuario con el que intenta ingresar no existe.', 16, 1)
 	END
 
 

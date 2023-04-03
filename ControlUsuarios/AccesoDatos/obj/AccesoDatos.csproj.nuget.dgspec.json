@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\Cibergestion\\ControlUsuarios\\AccesoDatos\\AccesoDatos.csproj": {}
+    "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\CiberGestion\\ControlUsuarios\\AccesoDatos\\AccesoDatos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\Cibergestion\\ControlUsuarios\\AccesoDatos\\AccesoDatos.csproj": {
+    "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\CiberGestion\\ControlUsuarios\\AccesoDatos\\AccesoDatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\Cibergestion\\ControlUsuarios\\AccesoDatos\\AccesoDatos.csproj",
+        "projectUniqueName": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\CiberGestion\\ControlUsuarios\\AccesoDatos\\AccesoDatos.csproj",
         "projectName": "AccesoDatos",
-        "projectPath": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\Cibergestion\\ControlUsuarios\\AccesoDatos\\AccesoDatos.csproj",
+        "projectPath": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\CiberGestion\\ControlUsuarios\\AccesoDatos\\AccesoDatos.csproj",
         "packagesPath": "C:\\Users\\gutie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\Cibergestion\\ControlUsuarios\\AccesoDatos\\obj\\",
+        "outputPath": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\CiberGestion\\ControlUsuarios\\AccesoDatos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\Cibergestion\\ControlUsuarios\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\Cibergestion\\ControlUsuarios\\Entidades\\Entidades.csproj"
+              "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\CiberGestion\\ControlUsuarios\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\CiberGestion\\ControlUsuarios\\Entidades\\Entidades.csproj"
               }
             }
           }
@@ -81,14 +81,14 @@
         }
       }
     },
-    "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\Cibergestion\\ControlUsuarios\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\CiberGestion\\ControlUsuarios\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\Cibergestion\\ControlUsuarios\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\CiberGestion\\ControlUsuarios\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\Cibergestion\\ControlUsuarios\\Entidades\\Entidades.csproj",
+        "projectPath": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\CiberGestion\\ControlUsuarios\\Entidades\\Entidades.csproj",
         "packagesPath": "C:\\Users\\gutie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\Cibergestion\\ControlUsuarios\\Entidades\\obj\\",
+        "outputPath": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\CiberGestion\\ControlUsuarios\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"

@@ -48,12 +48,9 @@ namespace AccesoDatos.Clases
                 }
             }
         }
-        public UsuarioENT RegistrarInicioLogin(UsuarioLoginENT usuarioLogin)
+        public UsuarioENT RegistrarInicioLogin(int iIdUsuario, string sJWT)
         {
             UsuarioENT usuarioENT = new UsuarioENT();
-
-            int iIdUsuario = 0;
-            string sJWT = string.Empty;
             using (SqlConnection cnn = _context.Connection())
             {
                 try
@@ -110,6 +107,9 @@ namespace AccesoDatos.Clases
                     cnn.Close();
                     cnn.Dispose();
                     throw ex;
+                }
+                finally{
+                    throw new Exception("Las credenciales ingresadas son incorrectas.");
                 }
             }
         }

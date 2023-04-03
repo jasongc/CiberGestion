@@ -1,0 +1,6 @@
+<!--Navbar-->
+<app-navbar *ngIf="bUsuarioLogueado"></app-navbar>
+<div class="container-fluid p-0 p-md-5">
+  <router-outlet></router-outlet>
+</div>
+<app-footer *ngIf="bUsuarioLogueado"></app-footer>

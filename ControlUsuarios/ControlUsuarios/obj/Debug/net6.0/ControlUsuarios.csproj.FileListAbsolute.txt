@@ -50,3 +50,12 @@ C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\Contr
 C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\ControlUsuarios\obj\Debug\net6.0\ref\ControlUsuarios.dll
 C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\ControlUsuarios\bin\Debug\net6.0\Entidades.dll
 C:\Users\gutie\Desktop\Evaluaciones Técnicas\Cibergestion\ControlUsuarios\ControlUsuarios\bin\Debug\net6.0\Entidades.pdb
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\CiberGestion\ControlUsuarios\ControlUsuarios\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\CiberGestion\ControlUsuarios\ControlUsuarios\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\CiberGestion\ControlUsuarios\ControlUsuarios\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\CiberGestion\ControlUsuarios\ControlUsuarios\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\CiberGestion\ControlUsuarios\ControlUsuarios\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\CiberGestion\ControlUsuarios\ControlUsuarios\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\CiberGestion\ControlUsuarios\ControlUsuarios\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\CiberGestion\ControlUsuarios\ControlUsuarios\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\gutie\Desktop\Evaluaciones Técnicas\CiberGestion\ControlUsuarios\ControlUsuarios\obj\Debug\net6.0\ControlUsuarios.MvcApplicationPartsAssemblyInfo.cs

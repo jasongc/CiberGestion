@@ -1,5 +1,6 @@
 ﻿using Entidades.Clases;
 using Entidades.Utilitarios;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Negocios.Interfaces;
 
@@ -19,6 +20,7 @@ namespace ControlUsuarios.Controllers
 
         // GET: api/<LoginController>
         [HttpPut("RegistrarCierreLogin/{id}")]
+        [Authorize]
         public ActionResult<RespuestaENT> RegistrarCierreLogin(int id)
         {
             RespuestaENT respuestaENT = new RespuestaENT();

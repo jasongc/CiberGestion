@@ -1,0 +1,60 @@
+<!-- Default form register -->
+
+<div class="row w-100 mx-0 justify-content-center">
+        <div class="col-12 col-md-6">
+            <form (ngSubmit)="guardarActualizacion( f )" #f="ngForm" class=" border border-light p-5 animated bg-light fadeIn">
+    
+                <p class="h4 mb-4">Modifica tu contraseña</p>
+    
+                <div class="form-row mb-4">
+                    <div class="col">
+                        <label for="contrasenia">Contraseña actual</label>
+                        <div class="input-group">
+                            <input type="{{ showPassword ? 'text' : 'password' }}" class="form-control" id="contrasenia" name="contrasenia" [(ngModel)]="usuario.contrasenia" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text h-100" id="basic-addon2" (click)="togglePassword()"><i class="fa" [ngClass]="{'fa-eye': !showPassword, 'fa-eye-slash': showPassword}"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row mb-4">
+                    <div class="col">
+                        <label for="nueva_contrasenia">Nueva contraseña</label>
+                        <div class="input-group">
+                            <input type="{{ showNewPassword ? 'text' : 'password' }}" class="form-control" id="nueva_contrasenia" name="nueva_contrasenia" [(ngModel)]="usuario.nueva_contrasenia" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text h-100" id="basic-addon2" (click)="toggleNewPassword()"><i class="fa" [ngClass]="{'fa-eye': !showNewPassword, 'fa-eye-slash': showNewPassword}"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row mb-4">
+                    <div class="col">
+                        <label for="confirmar_contrasenia">Confirmar contraseña</label>
+                        <div class="input-group">
+                            <input type="{{ showConfirmPassword ? 'text' : 'password' }}" class="form-control" id="confirmar_contrasenia" name="confirmar_contrasenia" [(ngModel)]="usuario.confirmar_contrasenia" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text h-100" id="basic-addon2" (click)="toggleConfirmPassword()"><i class="fa" [ngClass]="{'fa-eye': !showConfirmPassword, 'fa-eye-slash': showConfirmPassword}"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row mb-4">
+                    <ul>
+                        <li style="text-decoration: none;"><h5>Recuerda usar los siguientes elementos</h5></li>
+                        <li>Al menos una mayúscula</li>
+                        <li>Al menos una minúscula</li>
+                        <li>Al menos un número</li>
+                        <li>Al menos un caracter especial [@#$%^&*()_]</li>
+                        <li>10 caracteres mínimo</li>
+                    </ul>
+                </div>
+    
+                <!-- Sign up button -->
+                <button color="info" block="true" class="my-4 btn btn-success text-center" type="submit">Actualizar</button>    
+                <hr>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Default form register -->

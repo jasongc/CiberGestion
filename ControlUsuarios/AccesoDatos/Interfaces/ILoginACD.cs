@@ -9,7 +9,7 @@ namespace AccesoDatos.Interfaces
 {
     public interface ILoginACD
     {
-        public UsuarioENT RegistrarInicioLogin(UsuarioLoginENT usuarioLogin);
+        public UsuarioENT RegistrarInicioLogin(int iIdUsuario, string sJWT);
         public void RegistrarCierreLogin(int piIdUsuario);
         public void RegistrarIntentoFallidoLogin(int piIdUsuario);
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FKIjx+kf5BOiAwEXeOwf4+a8UucM/2cl4BjAn1mAE0Niz/vFGaDzOG6PxKDlg7lKW4iceLfT5rM1bk1Xee9jCA==",
+  "dgSpecHash": "GkGOqcLehaIYULwGGzQ6Ec2E8LLRNEZfUI+R/Xv84NPjMJEl3l1TU2DVEtzh2mX4sAdHrqxxqfB/YPoCxMIYOA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\Cibergestion\\ControlUsuarios\\AccesoDatos\\AccesoDatos.csproj",
+  "projectFilePath": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\CiberGestion\\ControlUsuarios\\AccesoDatos\\AccesoDatos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gutie\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\gutie\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",

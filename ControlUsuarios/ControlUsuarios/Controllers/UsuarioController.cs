@@ -1,5 +1,6 @@
 ﻿using Entidades.Clases;
 using Entidades.Utilitarios;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Negocios.Interfaces;
 
@@ -8,6 +9,7 @@ using Negocios.Interfaces;
 namespace ControlUsuarios.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class UsuarioController : ControllerBase
     {
@@ -27,7 +29,7 @@ namespace ControlUsuarios.Controllers
             {
                 usuarioLogin.iIdUsuario = id;
                 _usuarioNEG.CambiarContrasenia(usuarioLogin);
-                respuestaENT.Success("Se inició la sesión correctamente.");
+                respuestaENT.Success("Se actualizó la contraseña correctamente.");
                 return Ok(respuestaENT);
             }
             catch (Exception ex)

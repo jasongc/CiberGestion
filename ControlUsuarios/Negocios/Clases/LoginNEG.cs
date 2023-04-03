@@ -13,10 +13,12 @@ namespace Negocios.Clases
     {
         protected readonly ILoginACD _loginACD;
         protected readonly IUsuarioACD _usuarioACD;
-        public LoginNEG(ILoginACD loginACD, IUsuarioACD usuarioACD)
+        protected readonly IJsonWebTokenNEG _jsonWebTokenNEG;
+        public LoginNEG(ILoginACD loginACD, IUsuarioACD usuarioACD, IJsonWebTokenNEG jsonWebTokenNEG)
         {
             _loginACD = loginACD;
             _usuarioACD = usuarioACD;
+            _jsonWebTokenNEG = jsonWebTokenNEG;
         }
         public void RegistrarCierreLogin(int piIdUsuario)
         {
@@ -36,7 +38,10 @@ namespace Negocios.Clases
                 UsuarioENT usuarioENT = _usuarioACD.ObtenerUsuario(usuarioLogin.sEmail);
                 if (usuarioENT.sContrasenia == usuarioLogin.sContrasenia)
                 {
-                    usuarioENT.dtFechaUltimoAcceso = _loginACD.RegistrarInicioLogin(usuarioLogin).dtFechaUltimoAcceso;
+                    string sNombres = string.Format("{0} {1} {2}", usuarioENT.sNombres, usuarioENT.sApellidoPaterno, usuarioENT.sApellidoMaterno);
+                    usuarioENT.sJsonWebToken = _jsonWebTokenNEG.CreateToken(usuarioENT.sEmail, usuarioENT.sPerfil, sNombres, usuarioENT.iIdUsuario);
+                    usuarioENT.dtFechaUltimoAcceso = _loginACD.RegistrarInicioLogin(usuarioENT.iIdUsuario, usuarioENT.sJsonWebToken).dtFechaUltimoAcceso;
+
                 }
                 else
                     _loginACD.RegistrarIntentoFallidoLogin(usuarioENT.iIdUsuario);

@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-secondary display-flex">
+    <div class="container-fluid">
+        <a class="navbar-brand" [routerLink]="['/home']">Ciber Gestión</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a [routerLink]="['/home']" class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li *ngIf="bEsWebmaster"  class="nav-item">
+            <div ngbDropdown class="">
+                <a style="cursor: pointer"  class="nav-link active" id="dropdownBasic1" ngbDropdownToggle>
+                    Perfil
+                </a>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <a style="cursor: pointer" class="text-dark" [routerLink]="['/cambiar-contrasenia']" ngbDropdownItem>Cambiar contraseña</a>
+                </div>
+            </div>
+            </li>
+        </ul>
+        <div class="d-flex px-lg-5">
+            <label class="nav-link active text-white">{{sNombres}}</label>
+        </div>
+        <div class="d-flex ">
+            <a style="cursor: pointer" (click)="logout()" ngbDropdownItem class="nav-link active text-white ">Cerrar Sesión</a>
+        </div>
+        </div>
+    </div>
+</nav>

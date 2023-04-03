@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\Cibergestion\\ControlUsuarios\\Middleware\\Middleware.csproj": {}
+    "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\CiberGestion\\ControlUsuarios\\Middleware\\Middleware.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\Cibergestion\\ControlUsuarios\\Middleware\\Middleware.csproj": {
+    "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\CiberGestion\\ControlUsuarios\\Middleware\\Middleware.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\Cibergestion\\ControlUsuarios\\Middleware\\Middleware.csproj",
+        "projectUniqueName": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\CiberGestion\\ControlUsuarios\\Middleware\\Middleware.csproj",
         "projectName": "Middleware",
-        "projectPath": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\Cibergestion\\ControlUsuarios\\Middleware\\Middleware.csproj",
+        "projectPath": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\CiberGestion\\ControlUsuarios\\Middleware\\Middleware.csproj",
         "packagesPath": "C:\\Users\\gutie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\Cibergestion\\ControlUsuarios\\Middleware\\obj\\",
+        "outputPath": "C:\\Users\\gutie\\Desktop\\Evaluaciones Técnicas\\CiberGestion\\ControlUsuarios\\Middleware\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
